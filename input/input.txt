@@ -1,0 +1,10 @@
+# Linhas em branco e comentários serão ignorados
+# Parte do arquivo destinada a configuração
+tempoAtualizacaoDisplay=1000
+# Parte do arquivo destinado aos inputs de teste
+vazao=1.57
+entradaAr=0
+vazao=3.87
+entradaAr=0.20
+vazao=4.27
+entradaAr=0.15
