@@ -16,7 +16,15 @@ public class Relogio extends ComponenteDeExibicao{
     }
 
     public int getValorPonteiro(){
-        return ((int) volume) % ordem.valor;
+        int parteInteiraVolume = (int) this.volume;
+        int valorPonteiro = 0;
+        if (ordem == Ordem.LITROS){
+            valorPonteiro = parteInteiraVolume % 10;
+        } else {
+            valorPonteiro = parteInteiraVolume / ordem.valor;
+            valorPonteiro %= ordem.valor;
+        }   
+        return valorPonteiro;
     }
 
     @Override

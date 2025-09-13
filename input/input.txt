@@ -2,9 +2,11 @@
 # Parte do arquivo destinada a configuração
 tempoAtualizacaoDisplay=6000
 # Parte do arquivo destinado aos inputs de teste
-vazao=1.57
+vazao=20.57
 entradaAr=0
-vazao=3.87
+vazao=30.87
 entradaAr=0.20
-vazao=4.27
+vazao=40.27
+entradaAr=0.15
+vazao=140.27
 entradaAr=0.15

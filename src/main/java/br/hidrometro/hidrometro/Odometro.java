@@ -11,6 +11,10 @@ public class Odometro extends ComponenteDeExibicao {
         this.volume += valor;
     }
 
+    public float getVolume(){
+        return this.volume;
+    }
+
     @Override
     public String toString() {
         return "Odometro[" +

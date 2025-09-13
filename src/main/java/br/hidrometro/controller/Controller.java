@@ -26,13 +26,15 @@ public class Controller {
     public void simular(){
         for (Float valor : this.volumesLidosLote) {
             hidrometro.atualizaComponentes(valor);
+            this.renderiza(this.gerarSaida(hidrometro));
         }
     }
 
-    public void renderiza(){
+    public void renderiza(Saida saidaAtual){
+        System.out.println(saidaAtual);
     }
 
-    public Saida gerarSaida(){
-        return new Saida();
+    public Saida gerarSaida(Hidrometro hidrometro){
+        return new Saida(hidrometro.getOdometro(), hidrometro.getRelogioLitros().getValorPonteiro(), hidrometro.getRelogioDecilitros().getValorPonteiro());
     }
 }

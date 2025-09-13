@@ -1,8 +1,8 @@
 package main.java.br.hidrometro.enums;
 
 public enum Ordem {
-    LITROS(10),
-    DECILITROS(100);
+    LITROS(1),
+    DECILITROS(10);
 
     public final int valor;
 
