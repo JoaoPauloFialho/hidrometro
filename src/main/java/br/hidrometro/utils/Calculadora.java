@@ -12,7 +12,7 @@ public final class Calculadora {
         int tamLista = vazaoList.size();
         for (int i = 0; i < tamLista; i++){
             float volumeCalculado = vazaoList.get(i) * (tempo/1000); //conversão para segundos
-            volumeLote.add(volumeCalculado * (1 + entradaArList.get(i)));
+            volumeLote.add(volumeCalculado * (1 + entradaArList.get(i))); //volume real levando em conta o ar no cano
         }
 
         return volumeLote;

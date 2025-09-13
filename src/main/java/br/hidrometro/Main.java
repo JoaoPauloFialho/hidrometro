@@ -7,6 +7,7 @@ public class Main {
         Controller controller = new Controller("//home//joao//Área de Trabalho//Faculdade//Padrões de Projeto//ProjetosKatyusco//hidrometroV1//input//input.txt");
         try {
             controller.inicializar();
+            controller.simular();
         } catch (Exception e) {
             e.getStackTrace();
         }

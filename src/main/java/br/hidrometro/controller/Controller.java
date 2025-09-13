@@ -8,21 +8,25 @@ import main.java.br.hidrometro.hidrometro.Saida;
 import main.java.br.hidrometro.utils.Calculadora;
 
 public class Controller {
-    private float volume;
     private Hidrometro hidrometro;
     private ConsumidorTxt consumidorTxt;
+    private ArrayList<Float> volumesLidosLote = new ArrayList<Float>();
 
     public Controller(String caminho){
         consumidorTxt = new ConsumidorTxt(caminho);
+        hidrometro = new Hidrometro();
     }
 
     public void inicializar(){
         consumidorTxt.lerValores();
-        ArrayList<Float> volumeCalculadoLote = Calculadora.calcularVolumeEmLote(consumidorTxt.getVazaoList(), consumidorTxt.getEntradaArList(), consumidorTxt.getTempoAtualizacao());
+        volumesLidosLote = Calculadora.calcularVolumeEmLote(consumidorTxt.getVazaoList(), consumidorTxt.getEntradaArList(), consumidorTxt.getTempoAtualizacao());
         consumidorTxt.imprimirValoresLidos();
     }
-
+    
     public void simular(){
+        for (Float valor : this.volumesLidosLote) {
+            hidrometro.atualizaComponentes(valor);
+        }
     }
 
     public void renderiza(){
