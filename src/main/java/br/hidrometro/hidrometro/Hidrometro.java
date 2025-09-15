@@ -13,10 +13,15 @@ public class Hidrometro {
         this.relogioDecilitros = new Relogio(0, Ordem.DECILITROS);
     }
 
-    public void atualizaComponentes(float volume){
+    public boolean atualizaComponentes(float volume){
         this.odometro.atualiza(volume);
         this.relogioLitros.atualiza(volume);
         this.relogioDecilitros.atualiza(volume);
+        if(volume == 0){
+            return false;
+        } else{
+            return true;
+        }
     }
 
     public Odometro getOdometro() {

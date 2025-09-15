@@ -2,44 +2,44 @@ package main.java.br.hidrometro.hidrometro;
 
 public class Saida {
 
-    private Odometro odometro;
-    private int posicaoRelogioLitros;
-    private int posicaoRelogioDecilitros;
+    private float odometroVolume;
+    private char posicaoRelogioLitros;
+    private char posicaoRelogioDecilitros;
 
-    public Saida(Odometro odometro, int posicaoRelogioLitros, int posicaoRelogioDecilitros) {
-        this.odometro = odometro;
+    public Saida(float odometroVolume, char posicaoRelogioLitros, char posicaoRelogioDecilitros) {
+        this.odometroVolume = odometroVolume;
         this.posicaoRelogioLitros = posicaoRelogioLitros;
         this.posicaoRelogioDecilitros = posicaoRelogioDecilitros;
     }
 
-    public Odometro getOdometro() {
-        return odometro;
+    public float getOdometro() {
+        return odometroVolume;
     }
 
-    public int getPosicaoRelogioLitros() {
+    public char getPosicaoRelogioLitros() {
         return posicaoRelogioLitros;
     }
 
-    public int getPosicaoRelogioDecilitros() {
+    public char getPosicaoRelogioDecilitros() {
         return posicaoRelogioDecilitros;
     }
 
-    public void setOdometro(Odometro odometro) {
-        this.odometro = odometro;
+    public void setOdometro(float odometroVolume) {
+        this.odometroVolume = odometroVolume;
     }
 
-    public void setPosicaoRelogioLitros (int posicaoRelogioLitros) {
+    public void setPosicaoRelogioLitros (char posicaoRelogioLitros) {
         this.posicaoRelogioLitros = posicaoRelogioLitros;
     }
 
-    public void setPosicaoRelogioDecilitros (int posicaoRelogioDecilitros) {
+    public void setPosicaoRelogioDecilitros (char posicaoRelogioDecilitros) {
         this.posicaoRelogioDecilitros = posicaoRelogioDecilitros;
     }
 
     @Override
     public String toString() {
         return "Saida[" +
-                "odometro=" + odometro.getVolume() +
+                "odometro=" + odometroVolume +
                 ", posicaoRelogioLitros='" + posicaoRelogioLitros + '\'' +
                 ", posicaoRelogioDecilitros='" + posicaoRelogioDecilitros + '\'' +
                 ']';
