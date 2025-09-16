@@ -3,10 +3,10 @@ package main.java.br.hidrometro.hidrometro;
 public class Saida {
 
     private float odometroVolume;
-    private char posicaoRelogioLitros;
-    private char posicaoRelogioDecilitros;
+    private int posicaoRelogioLitros;
+    private int posicaoRelogioDecilitros;
 
-    public Saida(float odometroVolume, char posicaoRelogioLitros, char posicaoRelogioDecilitros) {
+    public Saida(float odometroVolume, int posicaoRelogioLitros, int posicaoRelogioDecilitros) {
         this.odometroVolume = odometroVolume;
         this.posicaoRelogioLitros = posicaoRelogioLitros;
         this.posicaoRelogioDecilitros = posicaoRelogioDecilitros;
@@ -16,11 +16,11 @@ public class Saida {
         return odometroVolume;
     }
 
-    public char getPosicaoRelogioLitros() {
+    public int getPosicaoRelogioLitros() {
         return posicaoRelogioLitros;
     }
 
-    public char getPosicaoRelogioDecilitros() {
+    public int getPosicaoRelogioDecilitros() {
         return posicaoRelogioDecilitros;
     }
 
@@ -28,11 +28,11 @@ public class Saida {
         this.odometroVolume = odometroVolume;
     }
 
-    public void setPosicaoRelogioLitros (char posicaoRelogioLitros) {
+    public void setPosicaoRelogioLitros (int posicaoRelogioLitros) {
         this.posicaoRelogioLitros = posicaoRelogioLitros;
     }
 
-    public void setPosicaoRelogioDecilitros (char posicaoRelogioDecilitros) {
+    public void setPosicaoRelogioDecilitros (int posicaoRelogioDecilitros) {
         this.posicaoRelogioDecilitros = posicaoRelogioDecilitros;
     }
 
